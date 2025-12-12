@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   dictionary.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/11 19:52:43 by rfoo              #+#    #+#             */
-/*   Updated: 2025/12/12 16:26:36 by rfoo             ###   ########.fr       */
+/*   Created: 2025/12/12 14:34:24 by rfoo              #+#    #+#             */
+/*   Updated: 2025/12/12 16:53:09 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include "libft/libft.h"
+t_dict dict_init(int dict_size, );
 
-typedef struct entry
+int dict_size(char *conversions)
 {
-	char	key;
-	void	*value;
-}			t_entry;
+	return ft_strlen(conversions);
+}
 
-typedef struct dict
+void	*dict_get(t_dict dict, char conversion)
 {
-	int		size;
-	t_entry	*entries;
-}			t_dict;
+	int	i;
 
-int		ft_printf(const char *format, ...);
-int		*insert();
-void	*lookup_dict();
+	i = 0;
+	while (i < dict.size)
+	{
+		if (dict->entries[i]->key == conversion)
+			return (dict.entries->value);
+		i++;
+	}
+}
 
-#endif
+static void dict_set(t_dict dict, t_entry entry)
+{
+	
+}
