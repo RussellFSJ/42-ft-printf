@@ -6,13 +6,13 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 14:34:24 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 18:12:29 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 20:11:52 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_dict	*dict_init(int dict_size)
+t_dict	*dict_init(char *keys)
 {
 	t_dict	*printf_dict;
 	t_entry	*entries;
@@ -20,9 +20,9 @@ t_dict	*dict_init(int dict_size)
 	printf_dict = malloc(sizeof(t_dict));
 	if (!printf_dict)
 		return (NULL);
-	printf_dict->size = dict_size;
+	printf_dict->size = ft_strlen(keys);
 	printf_dict->count = 0;
-	printf_dict->entries = ft_calloc(dict_size, sizeof(t_entry));
+	printf_dict->entries = ft_calloc(ft_strlen(keys), sizeof(t_entry));
 	if (!entries)
 	{
 		free(printf_dict);
@@ -32,12 +32,7 @@ t_dict	*dict_init(int dict_size)
 	return (printf_dict);
 }
 
-static int	dict_size(char *keys)
-{
-	return ft_strlen(keys);
-}
-
-static void dict_set(t_dict *dict, char key, void (*handler)(void*))
+static void	dict_set(t_dict *dict, char key, void (*handler)(void*))
 {
 	int		index;
 	t_entry	entry;
@@ -60,7 +55,8 @@ static void dict_set(t_dict *dict, char key, void (*handler)(void*))
 		index++;
 	}
 }
-static void add_entries(t_dict *dict)
+
+static void	add_entries(t_dict *dict)
 {
 	dict_set(dict, 'c', handle_char);
 	dict_set(dict, 's', handle_str);
@@ -72,7 +68,8 @@ static void add_entries(t_dict *dict)
 	dict_set(dict, 'X', handle_upperhex);
 	dict_set(dict, '%', handle_percent);
 }
-void	(*dict_get(t_dict *dict, char key))(void *)
+
+t_handler	dict_get(t_dict *dict, char key)
 {
 	int	index;
 

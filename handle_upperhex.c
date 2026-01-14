@@ -6,13 +6,13 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:49:09 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 18:47:00 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 19:25:27 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void handle_upperhex(unsigned long n)
+void	handle_upperhex(unsigned long n)
 {
 	ft_putupperhex_fd(n, 1);
 }

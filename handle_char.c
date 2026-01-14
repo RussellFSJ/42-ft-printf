@@ -6,13 +6,13 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 18:45:30 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 17:49:24 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 20:27:19 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void handle_char(char c)
+void	handle_char(char c)
 {
-	ft_putchar_fd(c, 1);
+	return ft_putchar_fd(c, 1);
 }

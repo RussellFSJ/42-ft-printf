@@ -6,13 +6,13 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:48:58 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 18:47:05 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 19:25:33 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void handle_lowerhex(unsigned long n)
+void	handle_lowerhex(unsigned long n)
 {
 	ft_putlowerhex_fd(n, 1);
 }

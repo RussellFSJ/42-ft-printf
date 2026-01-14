@@ -6,13 +6,13 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 19:08:17 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 19:08:24 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 19:26:46 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void handle_ptr(void *ptr)
+void	handle_ptr(void *ptr)
 {
 	ft_putptr_fd(ptr, 1);
 }

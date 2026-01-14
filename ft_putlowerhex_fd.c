@@ -6,7 +6,7 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:48:41 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 19:05:08 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 19:26:09 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putlowerhex_fd(unsigned long n, int fd)
 	if (n == 0)
 	{
 		ft_putchar_fd('0', fd);
-		return;
+		return ;
 	}
 	while (n > 0)
 	{

@@ -6,13 +6,13 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 18:25:13 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 18:26:40 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/14 19:24:59 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void handle_percent(void)
+void	handle_percent(void)
 {
 	ft_putchar_fd('#', 1);
 }
