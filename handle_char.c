@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   handle_char.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
+/*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 18:45:30 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 20:27:19 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/16 03:56:49 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	handle_char(char c)
+int	handle_char(char c)
 {
-	return ft_putchar_fd(c, 1);
+	return (write(1, &c, 1));
 }
