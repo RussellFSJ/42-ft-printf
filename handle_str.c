@@ -6,7 +6,7 @@
 /*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 18:55:09 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/16 06:46:33 by russ1337         ###   ########.fr       */
+/*   Updated: 2026/01/16 06:55:16 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	handle_str(char *s)
 {
-	int	count;
+	int	bytes;
 
-	count = 0;
+	bytes = 0;
 	if (!s)
-		return (count);
+		return (bytes);
 	while (*s)
 	{
-		count += handle_char(*s);
+		bytes += handle_char(*s);
 		s++;
 	}
-	return (count);
+	return (bytes);
 }

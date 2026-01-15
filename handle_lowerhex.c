@@ -3,16 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   handle_lowerhex.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
+/*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:48:58 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 19:25:33 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/16 06:57:23 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	handle_lowerhex(unsigned long n)
+int	handle_lowerhex(unsigned long n)
 {
-	ft_putlowerhex_fd(n, 1);
+	char	*hex;
+	char	buffer[17];
+	int		i;
+	int		bytes;
+
+	hex = "0123456789abcdef";
+	i = 16;
+	buffer[i] = '\0';
+	bytes = 0;
+	if (n == 0)
+	{
+		bytes += handle_char('0');
+		return (bytes);
+	}
+	while (n > 0)
+	{
+		buffer[--i] = hex[n % 16];
+		n /= 16;
+	}
+	bytes += handle_str(&buffer[i]);
+	return (bytes);
 }

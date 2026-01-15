@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   handle_percent.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
+/*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 18:25:13 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 19:24:59 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/16 06:52:32 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	handle_percent(void)
+int	handle_percent(void)
 {
-	ft_putchar_fd('#', 1);
+	return (handle_char('%'));
 }
