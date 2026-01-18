@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
+/*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 11:58:48 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/14 20:22:32 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/19 02:38:04 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,28 @@
 
 int	ft_printf(const char *s, ...)
 {
-	va_list	args;
-	int		i;
-	int		count;
-	t_dict	*dict;
+	va_list		args;
+	int			i;
+	int			bytes;
+	t_dict		*dict;
+	t_handler	handler;
 
 	va_start(args, s);
 	i = 0;
-	count = 0;
+	bytes = 0;
 	dict = dict_init("cspdiuxX%");
+	handler = NULL;
 	while (s[i])
 	{
 		if (s[i] == '%')
 		{
 			i++;
-			dict_get(dict, s[i])(s[i]);
+			handler = dict_get(dict, s[i]);
 		}
-
+		if (handler)
+			bytes += handler(&args);
 		i++;
 	}
 	va_end(args);
-	return (count);
+	return (bytes);
 }
