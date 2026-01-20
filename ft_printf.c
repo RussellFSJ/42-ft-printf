@@ -6,11 +6,13 @@
 /*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 11:58:48 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 08:54:50 by russ1337         ###   ########.fr       */
+/*   Updated: 2026/01/20 09:50:19 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	use_handler(char s, t_dict *dict, va_list *args);
 
 int	ft_printf(const char *s, ...)
 {
@@ -40,7 +42,7 @@ int	ft_printf(const char *s, ...)
 	return (bytes);
 }
 
-int	use_handler(char s, t_dict *dict, va_list *args)
+static int	use_handler(char s, t_dict *dict, va_list *args)
 {
 	t_handler	handler;
 

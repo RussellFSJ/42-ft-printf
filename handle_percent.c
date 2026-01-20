@@ -6,13 +6,14 @@
 /*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 18:25:13 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/19 05:08:15 by russ1337         ###   ########.fr       */
+/*   Updated: 2026/01/20 09:48:45 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	handle_percent(void)
+int	handle_percent(va_list *args)
 {
+	(void)args;
 	return (write(1, "%", 1));
 }

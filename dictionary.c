@@ -6,17 +6,19 @@
 /*   By: russ1337 <russ1337@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 14:34:24 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 06:17:29 by russ1337         ###   ########.fr       */
+/*   Updated: 2026/01/20 09:45:21 by russ1337         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static void	dict_set(t_dict *dict, char key, t_handler handler);
+static void	add_entries(t_dict *dict);
+
 t_dict	*dict_init(void)
 {
 	const char	*keys;
 	t_dict	*printf_dict;
-	t_entry	*entries;
 
 	keys = "cspdiuxX%";
 	printf_dict = malloc(sizeof(t_dict));
