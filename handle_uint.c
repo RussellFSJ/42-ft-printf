@@ -6,17 +6,17 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 15:19:30 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 16:29:07 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/20 16:48:49 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int print_uint(unsigned long n);
+static int	print_uint(unsigned long n);
 
 int	handle_uint(va_list *args)
 {
-	unsigned int n;
+	unsigned int	n;
 
 	n = va_arg(*args, unsigned int);
 	return (print_uint((unsigned long)n));
