@@ -6,7 +6,7 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 11:58:48 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 12:13:45 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/20 15:13:35 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_printf(const char *s, ...)
 		i++;
 	}
 	va_end(args);
+	dict_free(dict);
 	return (bytes);
 }
 

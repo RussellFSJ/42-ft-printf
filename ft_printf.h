@@ -6,7 +6,7 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:52:43 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 12:14:30 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/20 16:12:23 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,14 @@ int			print_hex(unsigned long n, int uppercase);
 int			handle_char(va_list *args);
 int			handle_str(va_list *args);
 int			handle_int(va_list *args);
+int			handle_uint(va_list *args);
 int			handle_ptr(va_list *args);
 int			handle_lowerhex(va_list *args);
 int			handle_upperhex(va_list *args);
 int			handle_percent(va_list *args);
 t_dict		*dict_init(void);
 t_handler	dict_get(t_dict *dict, char key);
+void		dict_free(t_dict *dict);
 int			ft_printf(const char *s, ...);
 
 #endif
