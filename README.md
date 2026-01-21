@@ -84,10 +84,10 @@ int main(void)
 {
 	printf("%d\n", ft_printf(NULL));
 	printf("%d\n", printf(NULL));
-	
+
 	printf("%d\n", ft_printf(0));
 	printf("%d\n", printf(0));
-
+    
     ft_printf("Character: %c\n", 'A');
     ft_printf("Hello %s!\n", "world");
     ft_printf("Pointer: %p\n", (void *)&main);
