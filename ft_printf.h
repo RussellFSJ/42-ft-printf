@@ -6,7 +6,7 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:52:43 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 16:12:23 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/29 17:38:45 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct entry
 typedef struct dict
 {
 	int		size;
-	int		count;
 	t_entry	*entries;
 }			t_dict;
 

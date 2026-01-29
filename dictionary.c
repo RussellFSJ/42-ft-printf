@@ -6,7 +6,7 @@
 /*   By: rfoo <rfoo@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 14:34:24 by rfoo              #+#    #+#             */
-/*   Updated: 2026/01/20 16:12:36 by rfoo             ###   ########.fr       */
+/*   Updated: 2026/01/29 17:38:34 by rfoo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ t_dict	*dict_init(void)
 	if (!printf_dict)
 		return (NULL);
 	printf_dict->size = ft_strlen(keys);
-	printf_dict->count = 0;
 	printf_dict->entries = ft_calloc(ft_strlen(keys), sizeof(t_entry));
 	if (!printf_dict->entries)
 	{
